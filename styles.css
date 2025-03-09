@@ -179,7 +179,7 @@ nav a.active::after {
 }
 
 h1 {
-    color: #2c3e50;
+    color: #000000;
 }
 
 #video {
@@ -232,6 +232,7 @@ video {
 
 
 h1 {
+    
     font-size: 24px;
 }
 
@@ -251,8 +252,9 @@ p {
 
 #capsula p, #capsulaCalculadora p {
     cursor: pointer;
-    color: #00aaff;
+    color: #ff0000;
     text-decoration: underline;
+    text-align: center;
 }
 
 #capsula p:hover, #capsulaCalculadora p:hover {
@@ -394,7 +396,7 @@ ul li {
 /* Estilos del enlace para abrir el modal */
 #videoProyecto {
     cursor: pointer;
-    color: #4da3ff;
+    color: #ff4d4d;
     text-decoration: underline;
     font-weight: bold;
     transition: color 0.3s;
