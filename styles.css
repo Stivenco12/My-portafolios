@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: white;
     overflow-x: hidden;
 }
 #fondoInicioTelefono{
@@ -405,7 +406,13 @@ ul li {
 
 
 @media screen and (max-width: 430px) {
-
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: rgb(0, 0, 0);
+        overflow-x: hidden;
+    }
 
 /* ==== PERFIL Y PRESENTACIÓN ==== */
 .avatar-container {
