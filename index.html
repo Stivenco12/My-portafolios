@@ -3,89 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Portafolio - Jedier Stevenson</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Portafolio</div>
-        <nav>
-            <ul>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#" class="btn">¡Vamos!</a></li>
-            
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="contenido">
-            <h1>¡Bienvenido a Mi Portafolio!</h1>
-            <p>Aquí encontrarás una colección de mis mejores trabajos. ¡No te los pierdas!</p>
-            <div class="container">
-                <div class="project">
-                    Proyecto 1
-                    <div class="info">
-                        <p>Descripción del Proyecto 1</p>
-                        <a href="#">Ver más</a>
-                    </div>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+    </nav>  
+
+    <!-- Sección de Inicio + ¿Quién Soy? -->
+    <section id="inicio">
+        <video src="Resures/siegmeyer-of-catarina-dark-souls-moewalls-com.mp4" id="fondoInicio" autoplay muted loop></video>
+        
+        <div class="contenido-container">
+            <div class="contenido-texto">
+                <div class="avatar-container">
+                    <img id="avatar" src="/Resures/yo.jpg" alt="Foto de JEDIER STIVENSON CORREA AMARIS">
                 </div>
-                <div class="project">
-                    Proyecto 2
-                    <div class="info">
-                        <p>Descripción del Proyecto 2</p>
-                        <a href="#">Ver más</a>
-                    </div>
+                <p id="nombre">
+                    Soy <strong>JEDIER STIVENSON CORREA AMARIS</strong>, , un apasionado desarrollador Full Stack Junior, dedicado a crear soluciones tecnológicas eficientes, innovadoras y escalables.
+                </p>
+                <p id="descripcion">
+                    Me especializo en el desarrollo de aplicaciones web y la optimización de bases de datos, diseñando soluciones eficientes, escalables y de alto rendimiento para proyectos innovadores y profesionales.
+                </p>
+                <!-- Habilidades -->
+                <div id="habilidades">
+                    <h3>Habilidades Técnicas</h3>
+                    <ul>
+                        <li>✔ HTML, CSS, JavaScript</li>
+                        <li>✔ Java, Python, C#</li>
+                        <li>✔ Bases de Datos SQL</li>
+                        <li>✔ Git y Control de Versiones</li>
+                    </ul>
                 </div>
-                <div class="project">
-                    Proyecto 3
-                    <div class="info">
-                        <p>Descripción del Proyecto 3</p>
-                        <a href="#">Ver más</a>
-                    </div>
+                
+                <!-- Frase Inspiradora -->
+                <p id="frase">
+                    "Construyendo soluciones con código limpio, eficiente y escalable."
+                </p>
+                
+                <!-- Redes Sociales -->
+                <div id="redes">
+                    <a href="https://github.com/Stivenco12" target="_blank" class="btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/jedier-stivenson-correa-amariz-628597353/" target="_blank" class="btn">LinkedIn</a>
                 </div>
             </div>
-        </div>
-        <div class="fondo"><img src="image.png" alt=""></div>
-    </section>
-    <section class="info">
-        <p>✅ Un portafolio efectivo permite mostrar proyectos y enlaces relevantes de manera organizada y atractiva.</p>
-    </section>
-    
-    <!-- Sección Sobre Mí -->
-    <section class="sobre-mi" id="sobre-mi">
-        <div class="texto">
-            <h2>¿Quién Soy?</h2>
-            <p>Soy un apasionado del diseño y desarrollo web. Me encanta crear experiencias únicas que sorprendan a los usuarios. ¡Vamos a hacer algo increíble juntos!</p>
-            <a href="#contacto" class="btn">Contáctame Ahora</a>
+            
         </div>
     </section>
 
-    <!-- Sección Lo Que Ofrezco -->
-    <section class="ofrecimiento">
-        <h2>Lo Que Ofrezco</h2>
-        <p>Mis habilidades son tan variadas como mis proyectos. Aquí te cuento más.</p>
-        <div class="contenido">
-            <div class="fondo"><img src="image.png" alt=""></div>
-            <div class="caracteristicas">
-                <div class="item">
-                    <span class="icono">✔</span>
-                    <h3>Creatividad</h3>
-                    <p>Siempre busco la forma más original de presentar mis proyectos.</p>
+    <!-- Sección de Proyectos -->
+    <section id="proyectos">
+        <h2>Proyectos C#</h2>
+        <div>
+            <div id="capsula">
+                <h1>Proyecto "Avioncito" – Juego en C# con Windows Forms</h1>
+                <p><strong>Descripción:</strong>  
+                "Avioncito" es un proyecto desarrollado con el objetivo de aprender y mejorar mis habilidades en el lenguaje de programación C#. Utilizando Windows Forms, he diseñado e implementado un juego en el que el jugador controla un avión y debe evitar colisiones con otros aviones enemigos.</p>
+                
+                <p id="video" onclick="abrirDetalles()">Haz clic aquí para ver más detalles</p>
+            </div>
+        
+            <!-- Ventana Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="cerrarDetalles()">&times;</span>
+                    <h1>Detalles del Proyecto "Avioncito"</h1>
+        
+                    <p><strong>Gameplay:</strong></p>
+                    <video controls>
+                        <source src="Resures/avioncito 2025-03-08 19-59-32.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+        
+                    <p><strong>Características del Juego:</strong></p>
+                    <ul>
+                        <li>Desarrollado en C# con Windows Forms.</li>
+                        <li>Mecánica de juego sencilla y dinámica.</li>
+                        <li>Sistema de colisiones y reinicio.</li>
+                        <li>Diseño gráfico mejorado con sprites personalizados.</li>
+                        <li>Exportado a .exe para su ejecución sin entorno de desarrollo.</li>
+                    </ul>
+        
+                    <p><strong>Tecnologías Utilizadas:</strong></p>
+                    <ul>
+                        <li>Lenguaje: C#</li>
+                        <li>Entorno de desarrollo: Visual Studio</li>
+                        <li>Framework: .NET y Windows Forms</li>
+                        <li>Gestión de recursos: Imágenes y eventos en Windows Forms</li>
+                    </ul>
+        
+                    <p><strong>Objetivos de Aprendizaje y Mejoras Futuras:</strong></p>
+                    <ul>
+                        <li>Aumento progresivo de dificultad.</li>
+                        <li>Sistema de puntuaciones altas.</li>
+                        <li>Efectos de sonido y animaciones.</li>
+                    </ul>
+                    <p>Este proyecto representa un gran avance en mi aprendizaje de C# y Windows Forms.</p>
                 </div>
-                <div class="item">
-                    <span class="icono">✔</span>
-                    <h3>Portafolio para Mostrar Proyectos y Enlaces Relevantes</h3>
-                    <p>Un portafolio efectivo permite mostrar proyectos y enlaces relevantes de manera organizada y atractiva.</p>
-                </div>
-                <div class="item">
-                    <span class="icono">✔</span>
-                    <h3>Portafolio para Mostrar Proyectos y Enlaces Relevantes</h3>
-                    <p>Un portafolio efectivo permite mostrar proyectos y enlaces relevantes de manera organizada y atractiva.</p>
-                </div>
+
+            </div>
+
+        </div>
+        <div id="capsulaCalculadora">
+            <h1>Proyecto "Calculadora en C#" – Aplicación de Windows Forms</h1>
+            <p><strong>Descripción:</strong>  
+            Esta calculadora fue desarrollada con el propósito de mejorar mis habilidades en C#. Utilizando Windows Forms, he creado una aplicación funcional que permite realizar operaciones matemáticas básicas de manera sencilla e intuitiva.</p>
+            
+            <p id="videoCalculadora" onclick="abrirDetallesCalculadora()">Haz clic aquí para ver más detalles</p>
+        </div>
+        
+        <!-- Ventana Modal de la Calculadora -->
+        <div id="modalCalculadora" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarDetallesCalculadora()">&times;</span>
+                <h1>Detalles del Proyecto "Calculadora en C#"</h1>
+        
+                <p><strong>Funcionamiento:</strong></p>
+                <video controls>
+                    <source src="Resures/Form1 2025-03-08 20-47-19.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de video.
+                </video>
+        
+                <p><strong>Características de la Calculadora:</strong></p>
+                <ul>
+                    <li>Desarrollada en C# con Windows Forms.</li>
+                    <li>Interfaz gráfica sencilla e intuitiva.</li>
+                    <li>Soporta operaciones básicas: suma, resta, multiplicación y división.</li>
+                    <li>Manejo de errores en la división entre cero.</li>
+                    <li>Diseño adaptable y responsivo dentro de Windows Forms.</li>
+                    <li>Exportado a .exe para su ejecución independiente.</li>
+                </ul>
+        
+                <p><strong>Tecnologías Utilizadas:</strong></p>
+                <ul>
+                    <li>Lenguaje: C#</li>
+                    <li>Entorno de desarrollo: Visual Studio</li>
+                    <li>Framework: .NET y Windows Forms</li>
+                    <li>Manejo de eventos y validaciones en tiempo real.</li>
+                </ul>
+        
+                <p><strong>Objetivos de Aprendizaje y Mejoras Futuras:</strong></p>
+                <ul>
+                    <li>Agregar operaciones avanzadas como raíz cuadrada y potencias.</li>
+                    <li>Implementar un historial de operaciones.</li>
+                    <li>Incorporar un modo oscuro para mejorar la experiencia de usuario.</li>
+                </ul>
+                <p>Este proyecto ha sido una excelente oportunidad para afianzar mis conocimientos en desarrollo de aplicaciones de escritorio con C#.</p>
             </div>
         </div>
+        
+        <h2>Proyectos Wed</h2>
+        <div>
+            <div id="capsulaProyecto">
+                <h1>Proyecto "Nombre del Proyecto"</h1>
+                <p><strong>Descripción:</strong>  
+                Este proyecto fue desarrollado con el propósito de mejorar nuestras habilidades en desarrollo web. A través de tecnologías modernas, hemos creado una aplicación funcional e intuitiva.</p>
+            
+                <p id="videoProyecto" onclick="abrirDetallesProyecto()">Haz clic aquí para ver más detalles</p>
+            </div>
+            
+            <!-- Ventana Modal del Proyecto -->
+            <div id="modalProyecto" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="cerrarDetallesProyecto()">&times;</span>
+                    <h1>Detalles del Proyecto "Nombre del Proyecto"</h1>
+            
+                    <p><strong>Funcionamiento:</strong></p>
+                    <video controls>
+                        <source src="Resures/Document - Opera 2025-03-08 21-33-14.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+            
+                    <p><strong>Características del Proyecto:</strong></p>
+                    <ul>
+                        <li>Desarrollado con tecnologías modernas.</li>
+                        <li>Interfaz gráfica intuitiva y fácil de usar.</li>
+                        <li>Funcionalidades avanzadas implementadas.</li>
+                        <li>Optimizado para rendimiento y experiencia de usuario.</li>
+                    </ul>
+            
+                    <p><strong>Tecnologías Utilizadas:</strong></p>
+                    <ul>
+                        <li>Lenguajes de programación: HTML, CSS, JavaScript</li>
+                        <li>Frameworks y librerías: (agregar los utilizados)</li>
+                        <li>Metodologías ágiles y buenas prácticas de desarrollo.</li>
+                    </ul>
+            
+                    <p><strong>Objetivos de Aprendizaje y Mejoras Futuras:</strong></p>
+                    <ul>
+                        <li>Optimizar el rendimiento y mejorar la accesibilidad.</li>
+                        <li>Implementar nuevas funcionalidades.</li>
+                        <li>Mejorar la interfaz con nuevos diseños y animaciones.</li>
+                    </ul>
+                    <p>Este proyecto fue desarrollado por <strong>Jedier Stivenson</strong> y <strong>Danna Soto</strong>, quienes trabajaron en equipo para lograr una solución eficiente y efectiva.</p>
+                </div>
+            </div>
+            
+        </div>
     </section>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
