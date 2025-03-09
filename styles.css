@@ -407,13 +407,9 @@ ul li {
 
 @media screen and (max-width: 430px) {
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: rgb(0, 0, 0);
-        overflow-x: hidden;
+        color: #FFFFFF; /* Prueba con otros colores si lo prefieres */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra para más contraste */
     }
-
 /* ==== PERFIL Y PRESENTACIÓN ==== */
 .avatar-container {
     display: flex;
