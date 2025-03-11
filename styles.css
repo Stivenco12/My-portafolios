@@ -286,6 +286,29 @@ h2 {
     font-size: 15px;
     margin-bottom: 8px;
 }
+.btn-music {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7c5625;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-music:hover {
+    background-color: #7c5625;
+    transform: scale(1.05);
+}
+
+.btn-music:active {
+    background-color: #7c5625;
+    transform: scale(0.95);
+}
 
 /* Hacer el modal más adaptable a pantallas pequeñas */
 @media (max-width: 600px) {

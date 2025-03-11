@@ -45,3 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+function toggleMusica() {
+    let audio = document.getElementById("musicaFondo");
+    let btn = document.getElementById("btnMusica");
+
+    if (audio.paused) {
+        audio.volume = 0.08; 
+        audio.play();
+        btn.innerHTML = "🔇 Silenciar Música";
+    } else {
+        audio.pause();
+        btn.innerHTML = "🔊 Activar Música";
+    }
+}
+
