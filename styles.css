@@ -1,464 +1,322 @@
-/* ==== ESTILOS GENERALES ==== */
-body {
-    font-family: Arial, sans-serif;
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
-    color: white;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
-#fondoInicioTelefono{
-    position: absolute;
-    visibility: hidden;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000000;
+    line-height: 1.6;
 }
-/* ==== MENÚ SUPERIOR ==== */
+
+/* Navegación */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: black;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 15px 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s;
+    margin: 0 15px;
+    font-size: 18px;
 }
 
-nav a.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 3px;
-    background: rgb(180, 30, 30);
-    border-radius: 3px;
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
 }
 
-/* ==== SECCIÓN DE INICIO ==== */
+/* Sección de Inicio */
 #inicio {
     position: relative;
+    text-align: center;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
     overflow: hidden;
 }
 
-/* Imagen de fondo */
-#fondoInicio {
+#fondoInicio, #fondoInicioTelefono {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
+    z-index: -1;
 }
 
-/* Contenedor principal en dos columnas */
+#fondoInicioTelefono {
+    display: none;
+}
+
 .contenido-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    padding: 30px;
-    z-index: 1;
+    margin-left: 18vw;
+    margin-top: 5vw;
+    max-width: 800px;
+
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
-.contenido-texto {
-    max-width: 50%;
-}
-
-.imagen-muneco {
-    max-width: 40%;
-}
-
-.imagen-muneco img {
-    width: 100%;
-    max-width: 300px;
-}
-
-/* ==== PERFIL Y PRESENTACIÓN ==== */
 .avatar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#avatar {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 4px solid #d60909;
-    box-shadow: 0px 0px 10px rgba(189, 11, 11, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-
-#avatar:hover {
-    transform: scale(1.1);
-}
-
-/* ==== HABILIDADES ==== */
-#habilidades {
-    margin-top: 20px;
-}
-
-#habilidades h3 {
-    font-size: 24px;
-    color: #a82121;
-    text-transform: uppercase;
-    font-weight: bold;
+    text-align: center;
     margin-bottom: 15px;
 }
 
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #7c5625;
+}
+
+/* Habilidades */
 #habilidades ul {
     list-style: none;
-    padding: 0;
+    padding: 10px;
 }
 
 #habilidades li {
-    font-size: 18px;
-    margin: 5px 0;
-
+    padding: 5px 0;
 }
 
-/* ==== FRASE INSPIRADORA ==== */
-#frase {
-    font-style: italic;
-    color: #d60707;
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-/* ==== BOTONES Y REDES SOCIALES ==== */
+/* Redes Sociales */
 #redes {
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .btn {
     display: inline-block;
-    background: #d60909;
-    color: white;
     padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
     margin: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .btn:hover {
-    background: #ff7b00;
-    transform: scale(1.1);
+    background: #7c5625;
 }
 
-/* ==== SECCIÓN DE PROYECTOS ==== */
+/* Sección de Proyectos */
 #proyectos {
-    background: #020202;
-    padding: 50px;
-}
-#capsula {
+    padding: 40px;
+    text-align: center;
     background: white;
-    padding: 30px;
-    border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
 }
 
-h1 {
-    color: #000000;
-}
-
-#video {
-    margin-top: 15px;
-    cursor: pointer;
-    text-decoration: underline;
-    color: #2980b9;
-}
-
-/* Estilos para la ventana modal */
-/* Estilos para la ventana modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 50%;
-    max-height: 80vh; /* Altura máxima de la ventana emergente */
-    overflow-y: auto; /* Agrega scroll vertical si el contenido es largo */
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-}
-
-video {
-    width: 100%;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-
-h1 {
-    
-    font-size: 24px;
-}
-
-p {
-    font-size: 18px;
-}
-
-/* Contenedor de la sección */
-#capsula, #capsulaCalculadora {
-    background: #2a2a2a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 60%;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-#capsula p, #capsulaCalculadora p {
-    cursor: pointer;
-    color: #ff0000;
-    text-decoration: underline;
-    text-align: center;
-}
-
-#capsula p:hover, #capsulaCalculadora p:hover {
-    color: #ffaa00;
-}
-
-/* Modales */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;
-}
-
-.modal-content {
-    background-color: #333;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: red;
-}
-
-/* Video dentro del modal */
-video {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-/* Listas */
-ul {
-    text-align: left;
-    margin: 20px auto;
-    width: 80%;
-    list-style-type: square;
-}
-
-li {
-    font-size: 16px;
-    margin: 5px 0;
-}
-#capsula p:not(#video), #capsulaCalculadora p:not(#videoCalculadora) {
-    cursor: default;
-    color: white;
-    text-decoration: none;
-}
-/* Estilos generales del modal */
-
-#capsulaProyecto {
-    background-color: #1e1e1e; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
-}
-
-/* Contenedor del contenido del modal */
-.modal-content {
-    background-color: #1e1e1e;
-    color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Suaviza la sombra */
-    text-align: center;
-}
-
-/* Botón de cerrar */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #ffffff;
-}
-
-/* Estilos para el video */
-video {
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra suave */
-}
-
-/* Estilos para listas */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 8px 0;
-    border-left: 3px solid #4da3ff; /* Azul más vibrante */
-    padding-left: 10px;
-}
-
-/* Estilos del enlace para abrir el modal */
-#videoProyecto {
-    cursor: pointer;
-    color: #ff4d4d;
-    text-decoration: underline;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#videoProyecto:hover {
-    color: #1e90ff;
-}
-
-
-@media screen and (max-width: 430px) {
-    body {
-        color: #FFFFFF; /* Prueba con otros colores si lo prefieres */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra para más contraste */
-    }
-/* ==== PERFIL Y PRESENTACIÓN ==== */
-.avatar-container {
-    display: flex;
-    justify-content: center;
+h2 {
     margin-bottom: 20px;
-    margin-left: 40vw;
 }
 
-#avatar {
-    margin-top: -5vw;
-    margin-left: -40vw;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #b90909;
-    box-shadow: 0px 0px 10px rgba(255, 81, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
+#capsula, #capsulaCalculadora, #capsulaProyecto {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#avatar:hover {
-    transform: scale(1.1);
+/* Estilos para el fondo oscuro cuando el modal está activo */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Se asegura de estar encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar en la pantalla */
+    padding: 20px;
+    width: 90%;
+    max-width: 600px; /* Ancho máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Botón de cierre */
+.close {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff3333;
+}
+/* Estilos para el fondo oscuro cuando el modal está activo */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Se asegura de estar encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar en la pantalla */
+    padding: 20px;
+    width: 90%;
+    max-width: 600px; /* Ancho máximo */
+    max-height: 80vh; /* Máximo alto del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out; /* Animación de entrada */
+    overflow-y: auto; /* Scroll si el contenido es muy grande */
+}
+
+/* Evitar que los videos se desborden */
+.modal-content video {
+    max-width: 100%; /* Que no sobrepase el ancho del modal */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Centrar */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Botón de cierre */
+.close {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Estilos para el botón "Detalles de proyecto" */
+#video,#videoCalculadora,#videoProyecto {
+    display: inline-block;
+    background-color: #7c5625; /* Azul llamativo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    text-decoration: none; /* Evitar subrayado si es un enlace */
+}
+
+/* Efecto hover */
+#video:hover,#videoCalculadora:hover,#videoProyecto:hover {
+    background-color: #7c5625; /* Azul más oscuro */
+    transform: scale(1.05); /* Efecto de crecimiento ligero */
+}
+
+/* Efecto clic */
+#video:active ,#videoCalculadora:active,#videoProyecto:active{
+    background-color:  #7c5625;
+    transform: scale(0.98);
+}
+
+.close:hover {
+    color: #ff3333;
+}
+
+/* Mejorando los títulos y el contenido */
+.modal-content h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+}
+
+.modal-content ul li {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* Hacer el modal más adaptable a pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .modal-content h1 {
+        font-size: 18px;
+    }
+
+    .modal-content p,
+    .modal-content ul li {
+        font-size: 14px;
+    }
 }
 
 
-.contenido-texto{
 
-    position: absolute;
-    margin-top: 50vw;
-    margin-left: 13vw;
-}
-#fondoInicio{
-    visibility: hidden;
-}
-#fondoInicioTelefono{
-    visibility: visible;
-    position: absolute;
-    width: 440vw ;
-}
-#habilidades h3 {
 
-    color: #241717;
-
-}
-#redes{
-    position: absolute;
-    margin-top: -50vw;
-    margin-left: 48vw;
-}
-
+/* Responsividad */
+@media (max-width: 768px) {
+    #fondoInicio {
+        display: none;
+    }
+    #fondoInicioTelefono {
+        display: block;
+    }
+    .contenido-container {
+        width: 90%;
+        margin-left: 5vw;
+    }
 }
