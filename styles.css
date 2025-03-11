@@ -109,7 +109,7 @@ nav a.active {
 #proyectos {
     padding: 40px;
     text-align: center;
-    background: white;
+    background: rgb(0, 0, 0);
 }
 
 h2 {
@@ -117,7 +117,7 @@ h2 {
 }
 
 #capsula, #capsulaCalculadora, #capsulaProyecto {
-    background: #000000;
+    background: #2e2e2e;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
