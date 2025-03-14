@@ -32,12 +32,12 @@ class P2Element extends HTMLElement {
         <center>
             <div class="button-container">
                 <form id="form" action="https://formsubmit.co/jestcoam@gmail.com" method="POST">  
-                    <p>enviar mensaje directo a correo</p>
-                    <input id="dia" type="text" name="nombre" placeholder="cual es tu nombre" required>
-                    <input id="dia" type="text" name="para?" placeholder="para que?" required>
+                    <p class="ppp1">enviar mensaje directo a correo</p>
+                    <input id="nombre" type="text" name="nombre" placeholder="cual es tu nombre" required>
+                    <input id="nombre" type="text" name="para?" placeholder="para que?" required>
                     <br>
                     <br>
-                    <button id="yesButton" type="submit">Enviar</button>
+                    <button  class="contacto" id="yesButton" type="submit">Enviar</button>
 
                     <input type="hidden" name="_captcha" value="false">
 
