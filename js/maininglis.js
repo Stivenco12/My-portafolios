@@ -131,3 +131,32 @@ class P2Element extends HTMLElement {
 }
 
 customElements.define("p2-element", P2Element);
+document.getElementById("toggleTheme").addEventListener("click", function() {
+    const body = document.body;
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode");
+        this.textContent = "Modo Claro";
+    } else {
+        body.classList.add("light-mode");
+        this.textContent = "Modo Oscuro";
+    }
+});
+
+// CSS para modo claro
+const style = document.createElement("style");
+style.innerHTML = `
+    .light-mode {
+        background: white !important;
+        color: black !important;
+    }
+
+    .light-mode .p3,
+    .light-mode .ppp2,
+    .light-mode .ppp3,
+    .light-mode .contacto,
+    .light-mode .modal-content {
+        background: rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
+    }
+`;
+document.head.appendChild(style);
