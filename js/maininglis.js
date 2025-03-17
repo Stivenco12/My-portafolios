@@ -32,16 +32,16 @@ class P2Element extends HTMLElement {
         <center>
             <div class="button-container">
                 <form id="form" action="https://formsubmit.co/jestcoam@gmail.com" method="POST">  
-                    <p class="ppp1">enviar mensaje directo a correo</p>
-                    <input id="nombre" type="text" name="nombre" placeholder="cual es tu nombre" required>
-                    <input id="nombre" type="text" name="para?" placeholder="para que?" required>
+                    <p class="ppp1">Send a direct message to email</p>
+                    <input id="nombre" type="text" name="nombre" placeholder="What is your name?" required>
+                    <input id="nombre" type="text" name="para?" placeholder="What is it for?" required>
                     <br>
                     <br>
-                    <button  class="contacto" id="yesButton" type="submit">Enviar</button>
+                    <button class="contacto" id="yesButton" type="submit">Send</button>
 
                     <input type="hidden" name="_captcha" value="false">
 
-                    <input type="hidden" id="deviceInfo" name="deviceInfo"> <!-- Campo oculto para la información del dispositivo -->
+                    <input type="hidden" id="deviceInfo" name="deviceInfo"> <!-- Hidden field for device information -->
                 </form>
             </div>
         </center>
