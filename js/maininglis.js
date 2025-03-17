@@ -135,10 +135,10 @@ document.getElementById("toggleTheme").addEventListener("click", function() {
     const body = document.body;
     if (body.classList.contains("light-mode")) {
         body.classList.remove("light-mode");
-        this.textContent = "Modo Claro";
+        this.textContent = "Clear Mode";
     } else {
         body.classList.add("light-mode");
-        this.textContent = "Modo Oscuro";
+        this.textContent = "Dark Mode";
     }
 });
 
